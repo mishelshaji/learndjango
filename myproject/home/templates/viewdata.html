@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Department</th>
+    </tr>
+    {% for d in data %}
+    <tr>
+        <td>{{ d.name }}</td>
+        <td>{{ d.age }}</td>
+        <td>{{ d.department }}</td>
+    </tr>
+    {% endfor %}
+
+
+
+    <!-- For get method -->
+    <tr>
+        <td>{{ data.name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.department }}</td>
+    </tr>
+</table>
+{% endblock content %}

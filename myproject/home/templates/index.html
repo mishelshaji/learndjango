@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1 class="text-center">Home Page</h1>
+  <form method="POST">
+    <div class="container">
+      <table class="table">
+        {{ data.as_p }}
+        {% csrf_token %}
+      </table>
+      <button class="btn btn-primary btn-block">Save</button>
+    </div>
+  </form>
+<style>
+  .errorlist{
+    list-style-type: none;
+    color: red;
+  }
+</style>
+  <!-- <div class="card-body">
+    {{ data.name.label }}
+    {{ data.name }}
+  </div> -->
+{% endblock content %}
